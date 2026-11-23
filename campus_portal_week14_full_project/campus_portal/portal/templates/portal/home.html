@@ -1,0 +1,20 @@
+{% extends 'portal/base.html' %}
+
+{% block title %}Home | Campus Portal{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <p class="eyebrow">YOUR CAMPUS, CONNECTED</p>
+    <h1>Welcome to the Student Portal</h1>
+    <p class="lead">One convenient place for student resources, campus updates, and important information.</p>
+</section>
+
+<section class="content-card" aria-labelledby="features-heading">
+    <h2 id="features-heading">What you can find here</h2>
+    <ul class="feature-list">
+        <li><span class="feature-icon" aria-hidden="true">📢</span><span><strong>Announcements</strong><br>Stay informed about campus news and department updates.</span></li>
+        <li><span class="feature-icon" aria-hidden="true">📅</span><span><strong>Class schedules</strong><br>Keep track of class times and academic activities.</span></li>
+        <li><span class="feature-icon" aria-hidden="true">📚</span><span><strong>Learning resources</strong><br>Find helpful links and materials for your studies.</span></li>
+    </ul>
+</section>
+{% endblock %}

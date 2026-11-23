@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Campus Portal student information and resources">
+    <title>{% block title %}Campus Portal{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'portal/css/style.css' %}">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="{% url 'home' %}" aria-label="Campus Portal home">
+                <img src="{% static 'portal/images/logo.png' %}"
+                     alt="Campus Portal logo: an open book with a graduation cap"
+                     width="64" height="64">
+                <span class="brand-name">Campus Portal</span>
+            </a>
+            {% include 'portal/partials/navbar.html' %}
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <p>Campus Portal <span aria-hidden="true">•</span> Python Programming 2</p>
+    </footer>
+</body>
+</html>
